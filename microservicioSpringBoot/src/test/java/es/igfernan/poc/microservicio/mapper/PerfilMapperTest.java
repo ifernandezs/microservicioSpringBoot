@@ -15,17 +15,20 @@ import es.igfernan.poc.microservicio.dominio.dto.PerfilDTO;
  */
 public class PerfilMapperTest {
 
-    @Test
-    public void testMapearPerfilEnDTO() {
-	Perfil perfil = Perfil.builder().idPerfil(new Long(1)).nombre("Ignacio").primerApellido("Fernandez")
-		.segundoApellido("Sanchez").build();
-	PerfilDTO perfilDTO = PerfilMapper.mapearEntidadEnDTO(perfil);
-	assertEquals("Identificador de perfil no esperado", perfil.getIdPerfil(), perfilDTO.getIdPerfil());
-	assertEquals("Nombre de perfil no esperado", perfil.getNombre(), perfilDTO.getNombre());
-	assertEquals("Primer apellido de perfil no esperado", perfil.getPrimerApellido(),
-		perfilDTO.getPrimerApellido());
-	assertEquals("Segundo apellido de perfil no esperado", perfil.getSegundoApellido(),
-		perfilDTO.getSegundoApellido());
-    }
+	/**
+	 * Test unitario para el mapeo de un perfil en DTO
+	 */
+	@Test
+	public void testMapearPerfilEnDTO() {
+		Perfil perfil = Perfil.builder().idPerfil(new Long(1)).nombre("Ignacio").primerApellido("Fernandez")
+				.segundoApellido("Sanchez").build();
+		PerfilDTO perfilDTO = PerfilMapper.mapearEntidadEnDTO(perfil);
+		assertEquals("Identificador de perfil no esperado", perfil.getIdPerfil(), perfilDTO.getIdPerfil());
+		assertEquals("Nombre de perfil no esperado", perfil.getNombre(), perfilDTO.getNombre());
+		assertEquals("Primer apellido de perfil no esperado", perfil.getPrimerApellido(),
+				perfilDTO.getPrimerApellido());
+		assertEquals("Segundo apellido de perfil no esperado", perfil.getSegundoApellido(),
+				perfilDTO.getSegundoApellido());
+	}
 
 }

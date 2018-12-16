@@ -14,6 +14,9 @@ import es.igfernan.poc.microservicio.dominio.Perfil;
  */
 public class PerfilComponenteTest {
 
+    /**
+     * Test unitario de obtención de un perfil
+     */
     @Test
     public void testObtenerPerfil() {
 	PerfilComponente componente = new PerfilComponente();

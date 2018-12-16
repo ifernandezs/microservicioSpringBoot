@@ -17,6 +17,9 @@ import es.igfernan.poc.microservicio.validadores.PerfilValidador;
  */
 public class PerfilControladorTest {
 
+    /**
+     * Test unitario que obtiene un perfil por identificador
+     */
     @Test
     public void testObtenerPerfilPorIdPerfil() {
 	PerfilComponente perfilComponenteMock = Mockito.mock(PerfilComponente.class);
